@@ -1,0 +1,37 @@
+{
+  "name": "planet-succulent",
+  "version": "1.0.0",
+  "description": "MERN e-commerce app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm run start --prefix frontend",
+    "dev": "concurrently  \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasBandeira-MJ/mern-planet-succulent.git"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "e-commerce"
+  ],
+  "author": "Lucas Bandeira Moreira Jorge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasBandeira-MJ/mern-planet-succulent/issues"
+  },
+  "homepage": "https://github.com/LucasBandeira-MJ/mern-planet-succulent#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
