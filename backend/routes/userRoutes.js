@@ -1,6 +1,6 @@
 import express from 'express'
 const router = express.Router()
-import { authUser, getUserProfile } from '../controllers/userController.js'
+import { authUser, getUserProfile, registerUser } from '../controllers/userController.js'
 import { protect } from '../middleware/authMiddleware.js'
 
 // @desc    Auth user & get token
@@ -8,6 +8,14 @@ import { protect } from '../middleware/authMiddleware.js'
 // @access  Public
 router.post('/login', authUser)
 
+// @desc    Register new user & get token
+// @route   POST /api/users
+// @access  Public
+router.route('/').post(registerUser)
+
+// @desc    GET user profile
+// @route   GET /api/users/profile
+// @access  Private
 router.route('/profile')
     .get(protect, getUserProfile)
 
