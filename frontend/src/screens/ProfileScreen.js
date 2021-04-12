@@ -40,7 +40,7 @@ const ProfileScreen = ({ location, history }) => {
                 setEmail(user.email)
             }
         }
-    }, [history, userInfo, redirect, user, success])
+    }, [history, userInfo, redirect, user, success, dispatch])
 
     const submitHandler = (e) => {
         e.preventDefault()
