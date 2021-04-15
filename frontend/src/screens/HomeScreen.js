@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Col, Row } from 'react-bootstrap'
 
 import Product from '../components/Product'
+import ProductCaroulsel from '../components/ProductCaroulsel'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 
@@ -21,6 +22,7 @@ const HomeScreen = () => {
 
     return (
         <>
+            <ProductCaroulsel />
             <h1>Latest Products</h1> 
             {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : 
             

@@ -10,7 +10,8 @@
     "client": "npm run start --prefix frontend",
     "dev": "concurrently  \"npm run server\" \"npm run client\"",
     "deprecated:data:import": "node backend/seeder",
-    "deprecated:data:destroy": "node backend/seeder -d"
+    "deprecated:data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
